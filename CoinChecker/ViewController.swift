@@ -1,25 +1,20 @@
-//
-//  ViewController.swift
-//  CoinChecker
-//
-//  Created by Shunsuke Kondo on 9/3/17.
-//  Copyright © 2017 Shunsuke Kondo. All rights reserved.
-//
-
 import UIKit
+import APIKit
+import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let viewModel = ListViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return view.frame.height / 13
     }
-
-
 }
-

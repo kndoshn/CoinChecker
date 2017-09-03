@@ -1,5 +1,5 @@
 import Himotoki
 
-struct CoinInfo: Decodable {
-    
-}
+//struct CoinInfo: Decodable {
+//    
+//}

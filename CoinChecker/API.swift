@@ -11,6 +11,6 @@ extension CoincheckRequest where Response: Decodable {
     
 }
 
-struct FetchRequest: CoincheckRequest {
-    
-}
+//struct FetchRequest: CoincheckRequest {
+//    
+//}

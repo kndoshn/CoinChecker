@@ -33,7 +33,8 @@ final class ListViewModel: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ListCell
-        // TODO: Configure Cell
+        let row = indexPath.row
+        cell.configure(rate: coins.value[row].rate, row: indexPath.row)
         return cell
     }
 }

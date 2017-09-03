@@ -15,7 +15,7 @@ enum CoinType: String {
     case dash = "DASH"
     case bitcoinCash = "Bitcoin Cash"
     
-    var allTypes: [CoinType] {
+    static var allTypes: [CoinType] {
         return [
             .bitCoin, .ethereum, .etherClassic, .factom, .monero,
             .lisk, .augur, .ripple, .zCash, .nem, .liteCoin, .dash,

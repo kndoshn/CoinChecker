@@ -15,6 +15,6 @@ final class ViewController: UIViewController, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height / 13
+        return tableView.frame.height / CGFloat(CoinType.allTypes.count)
     }
 }

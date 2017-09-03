@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GWi-cK-dcm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Coin Checker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,6 +27,51 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-IP-Prc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" id="knc-8E-xDQ" customClass="ListCell" customModule="CoinChecker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knc-8E-xDQ" id="WdT-X5-8YO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thR-eG-TdT">
+                                                    <rect key="frame" x="58.5" y="12" width="52.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥10000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM0-iW-Yg1">
+                                                    <rect key="frame" x="266.5" y="12" width="90.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-db-BHM">
+                                                    <rect key="frame" x="18" y="7" width="30.5" height="30.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Kb1-db-BHM" secondAttribute="height" multiplier="1:1" id="eak-GF-b6w"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kb1-db-BHM" firstAttribute="leading" secondItem="WdT-X5-8YO" secondAttribute="leadingMargin" constant="10" id="5yf-s9-kwM"/>
+                                                <constraint firstItem="Kb1-db-BHM" firstAttribute="centerY" secondItem="WdT-X5-8YO" secondAttribute="centerY" id="Uct-oA-79O"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fM0-iW-Yg1" secondAttribute="trailing" constant="10" id="WgM-47-Smr"/>
+                                                <constraint firstItem="thR-eG-TdT" firstAttribute="centerY" secondItem="WdT-X5-8YO" secondAttribute="centerY" id="eMc-vA-qO3"/>
+                                                <constraint firstItem="fM0-iW-Yg1" firstAttribute="centerY" secondItem="WdT-X5-8YO" secondAttribute="centerY" id="hsn-yc-Spa"/>
+                                                <constraint firstItem="thR-eG-TdT" firstAttribute="leading" secondItem="Kb1-db-BHM" secondAttribute="trailing" constant="10" id="kUK-uk-tZO"/>
+                                                <constraint firstItem="fM0-iW-Yg1" firstAttribute="leading" secondItem="thR-eG-TdT" secondAttribute="trailing" priority="250" constant="5" id="tJQ-7w-Guk"/>
+                                                <constraint firstItem="Kb1-db-BHM" firstAttribute="height" secondItem="WdT-X5-8YO" secondAttribute="height" multiplier="0.7" id="ts4-IW-xYV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coinImageView" destination="Kb1-db-BHM" id="qCa-9k-TDo"/>
+                                            <outlet property="nameLabel" destination="thR-eG-TdT" id="yWD-Xg-XpB"/>
+                                            <outlet property="priceLabel" destination="fM0-iW-Yg1" id="iBJ-bm-VqB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,11 +82,30 @@
                             <constraint firstItem="CIa-IP-Prc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="omk-dY-2Pe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Coin Checker" id="Kwv-JF-628"/>
                     <connections>
                         <outlet property="tableView" destination="CIa-IP-Prc" id="n0d-zt-nAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8RT-5a-Hel">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GWi-cK-dcm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JaM-ur-3OB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ywv-Ui-WPk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbP-j2-XBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>

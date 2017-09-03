@@ -5,11 +5,10 @@ final class ListCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    func configure(rate: Double, row: Int) {
+    func configure(rate: String, row: Int) {
         let type = CoinType.allTypes[row]
-        // TODO: Coin Image
         coinImageView.image = UIImage(named: String(describing: type))
         nameLabel.text = type.rawValue
-        priceLabel.text = "¥\(rate)"
+        priceLabel.text = "¥" + rate
     }
 }

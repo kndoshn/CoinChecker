@@ -5,11 +5,12 @@ protocol CoincheckRequest: Request {}
 
 extension CoincheckRequest {
     var baseURL: URL {
-        return URL(string: "https://coincheck.com/api/rate/")!
+        return URL(string: "https://www.coincheck.com/api/rate")!
     }
 
     func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
         guard (200..<300).contains(urlResponse.statusCode) else {
+            print(urlResponse.statusCode, "Error")
             throw ResponseError.unacceptableStatusCode(urlResponse.statusCode)
         }
         return object
@@ -25,10 +26,10 @@ extension CoincheckRequest where Response: Decodable {
 struct FetchRequest: CoincheckRequest {
     var type: CoinType
     var path: String {
-        return type.path
+        return "/\(type.path)"
     }
     
-    typealias Response = [CoinInfo]
+    typealias Response = CoinInfo
     
     var method: HTTPMethod {
         return .get
@@ -39,6 +40,7 @@ struct FetchRequest: CoincheckRequest {
     }
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> FetchRequest.Response {
-        return try decodeArray(object)
+//        return try decodeArray(object)
+        return try decodeValue(object)
     }
 }

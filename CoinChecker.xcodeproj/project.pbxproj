@@ -17,7 +17,6 @@
 		116AFA271F5B1F4200CBFBA1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFA261F5B1F4200CBFBA1 /* API.swift */; };
 		116AFA291F5B1FF300CBFBA1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFA281F5B1FF300CBFBA1 /* ListViewModel.swift */; };
 		116AFA2C1F5B205300CBFBA1 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFA2A1F5B205300CBFBA1 /* ListCell.swift */; };
-		116AFA2D1F5B205300CBFBA1 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116AFA2B1F5B205300CBFBA1 /* ListCell.xib */; };
 		118615C81F5C504900D68A86 /* CoinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118615C71F5C504900D68A86 /* CoinType.swift */; };
 		7699558568183840E388A754 /* Pods_CoinChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1360EBBE16A0CD85F4A0FE5D /* Pods_CoinChecker.framework */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		116AFA261F5B1F4200CBFBA1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		116AFA281F5B1FF300CBFBA1 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		116AFA2A1F5B205300CBFBA1 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
-		116AFA2B1F5B205300CBFBA1 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		118615C71F5C504900D68A86 /* CoinType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinType.swift; sourceTree = "<group>"; };
 		1360EBBE16A0CD85F4A0FE5D /* Pods_CoinChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A1A1A390FB46C579EA7A43 /* Pods-CoinChecker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinChecker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoinChecker/Pods-CoinChecker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				116AFA261F5B1F4200CBFBA1 /* API.swift */,
 				116AFA281F5B1FF300CBFBA1 /* ListViewModel.swift */,
 				116AFA2A1F5B205300CBFBA1 /* ListCell.swift */,
-				116AFA2B1F5B205300CBFBA1 /* ListCell.xib */,
 				116AFA111F5B178100CBFBA1 /* ViewController.swift */,
 				116AFA131F5B178100CBFBA1 /* Main.storyboard */,
 				116AFA161F5B178100CBFBA1 /* Assets.xcassets */,
@@ -173,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				116AFA1A1F5B178100CBFBA1 /* LaunchScreen.storyboard in Resources */,
-				116AFA2D1F5B205300CBFBA1 /* ListCell.xib in Resources */,
 				116AFA171F5B178100CBFBA1 /* Assets.xcassets in Resources */,
 				116AFA151F5B178100CBFBA1 /* Main.storyboard in Resources */,
 			);

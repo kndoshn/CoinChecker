@@ -32,11 +32,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knc-8E-xDQ" id="WdT-X5-8YO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thR-eG-TdT">
-                                                    <rect key="frame" x="58.5" y="12" width="52.5" height="21"/>
+                                                    <rect key="frame" x="59" y="12" width="52.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-db-BHM">
-                                                    <rect key="frame" x="18" y="7" width="30.5" height="30.5"/>
+                                                    <rect key="frame" x="18" y="9" width="26" height="26.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Kb1-db-BHM" secondAttribute="height" multiplier="1:1" id="eak-GF-b6w"/>
                                                     </constraints>
@@ -60,9 +60,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="fM0-iW-Yg1" secondAttribute="trailing" constant="10" id="WgM-47-Smr"/>
                                                 <constraint firstItem="thR-eG-TdT" firstAttribute="centerY" secondItem="WdT-X5-8YO" secondAttribute="centerY" id="eMc-vA-qO3"/>
                                                 <constraint firstItem="fM0-iW-Yg1" firstAttribute="centerY" secondItem="WdT-X5-8YO" secondAttribute="centerY" id="hsn-yc-Spa"/>
-                                                <constraint firstItem="thR-eG-TdT" firstAttribute="leading" secondItem="Kb1-db-BHM" secondAttribute="trailing" constant="10" id="kUK-uk-tZO"/>
+                                                <constraint firstItem="thR-eG-TdT" firstAttribute="leading" secondItem="Kb1-db-BHM" secondAttribute="trailing" constant="15" id="kUK-uk-tZO"/>
                                                 <constraint firstItem="fM0-iW-Yg1" firstAttribute="leading" secondItem="thR-eG-TdT" secondAttribute="trailing" priority="250" constant="5" id="tJQ-7w-Guk"/>
-                                                <constraint firstItem="Kb1-db-BHM" firstAttribute="height" secondItem="WdT-X5-8YO" secondAttribute="height" multiplier="0.7" id="ts4-IW-xYV"/>
+                                                <constraint firstItem="Kb1-db-BHM" firstAttribute="height" secondItem="WdT-X5-8YO" secondAttribute="height" multiplier="0.6" id="ts4-IW-xYV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

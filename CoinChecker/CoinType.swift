@@ -1,7 +1,7 @@
 import Foundation
 
 enum CoinType: String {
-    case bitCoin = "Bitcoin"
+    case bitcoin = "Bitcoin"
     case ethereum = "Ethereum"
     case etherClassic = "Ether Classic"
     case lisk = "Lisk"
@@ -17,14 +17,14 @@ enum CoinType: String {
     
     static var allTypes: [CoinType] {
         return [
-            .bitCoin, .ethereum, .etherClassic, .factom, .monero,
-            .lisk, .augur, .ripple, .zCash, .nem, .liteCoin, .dash,
+            .bitcoin, .ethereum, .etherClassic, .factom, .monero, .lisk,
+            .augur, .ripple, .zCash, .nem, .liteCoin, .dash, .bitcoinCash,
         ]
     }
     
     var path: String {
         switch self {
-        case .bitCoin:
+        case .bitcoin:
             return "btc_jpy"
         case .ethereum:
             return "eth_jpy"

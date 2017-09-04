@@ -20,11 +20,7 @@ final class ViewController: UIViewController, UITableViewDelegate {
         }
         
         viewModel.coins.asObservable()
-            .filter { x in
-                return !x.isEmpty
-            }
             .subscribe(onNext: { [unowned self] _ in
-                print("onNext")
                 self.tableView.reloadData()
             })
             .disposed(by: disposeBag)

@@ -39,7 +39,6 @@ final class ListViewModel: NSObject, UITableViewDataSource {
         let type = CoinType.allTypes[row]
 
         guard let rate = coins.value[type]?.rate else { return cell }
-        print("\(type) rate:", rate)
         cell.configure(rate: rate, row: indexPath.row)
         return cell
     }

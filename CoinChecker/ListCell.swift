@@ -9,7 +9,8 @@ final class ListCell: UITableViewCell {
         let type = CoinType.allTypes[row]
         coinImageView.image = UIImage(named: String(describing: type))
         nameLabel.text = type.rawValue
-        guard let intRate = Int(rate) else { return }
-        priceLabel.text = "¥\(intRate)"
+        
+        guard let doubleRate = Double(rate) else { return }
+        priceLabel.text = "¥\(Int(doubleRate))"
     }
 }

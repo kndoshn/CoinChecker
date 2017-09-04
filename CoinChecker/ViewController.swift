@@ -13,8 +13,7 @@ final class ViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = viewModel
+        configureTableView()
         
         CoinType.allTypes.forEach {
             viewModel.reloadData(type: $0)
@@ -25,13 +24,21 @@ final class ViewController: UIViewController, UITableViewDelegate {
                 return !x.isEmpty
             }
             .subscribe(onNext: { [unowned self] _ in
+                print("onNext")
                 self.tableView.reloadData()
             })
             .disposed(by: disposeBag)
     }
     
     // MARK: - TableView
+    func configureTableView() {
+        tableView.isUserInteractionEnabled = false
+        tableView.delegate = self
+        tableView.dataSource = viewModel
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height / CGFloat(CoinType.allTypes.count)
+        return (view.frame.height - 64) / CGFloat(CoinType.allTypes.count)
     }
 }

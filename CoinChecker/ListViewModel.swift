@@ -4,14 +4,12 @@ import APIKit
 
 final class ListViewModel: NSObject, UITableViewDataSource {
     
-    private(set) var coins = Variable<[CoinInfo]>([])
+    private(set) var coins = Variable<[CoinType: CoinInfo]>([.bitcoin: CoinInfo(rate: "")])
     private(set) var error = Variable<Error?>(nil)
     
     let disposeBag = DisposeBag()
     private let cellIdentifier = "ListCell"
-    
-    var count = 0
-    
+        
     func reloadData(type: CoinType) {
         let request = FetchRequest(type: type)
 
@@ -19,7 +17,7 @@ final class ListViewModel: NSObject, UITableViewDataSource {
             .subscribe { [weak self] event in
                 switch event {
                 case .next(let coin):
-                    self?.coins.value.append(coin)
+                    self?.coins.value[type] = coin
                 case .error(let error):
                     self?.error.value = error
                 default: break
@@ -36,12 +34,13 @@ final class ListViewModel: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ListCell
         guard !coins.value.isEmpty else { return cell }
-        guard count < CoinType.allTypes.count else { return cell }
         
         let row = indexPath.row
-        print(row, "/", coins.value.count)
-        cell.configure(rate: coins.value[row].rate, row: indexPath.row)
-        count += 1
+        let type = CoinType.allTypes[row]
+
+        guard let rate = coins.value[type]?.rate else { return cell }
+        print("\(type) rate:", rate)
+        cell.configure(rate: rate, row: indexPath.row)
         return cell
     }
 }

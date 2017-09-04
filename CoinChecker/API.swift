@@ -40,7 +40,6 @@ struct FetchRequest: CoincheckRequest {
     }
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> FetchRequest.Response {
-//        return try decodeArray(object)
         return try decodeValue(object)
     }
 }
